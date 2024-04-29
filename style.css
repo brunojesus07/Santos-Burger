@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+span {
+  color: #000000;
+  display: inline-block;
+}
+
+.img img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.page header {
+  margin-top: 20px;
+  min-height: 100px;
+}
+
+.page header .container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.page header .logo {
+  color: #ff8c00;
+  font-style: italic;
+  font-size: 2.2rem;
+}
+
+.page header .links {
+  display: flex;
+  align-items: center;
+}
+
+.page header .links li {
+  margin-left: 30px;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.page header .links li:nth-child(1n) {
+  border-radius: 20px;
+  padding: 15px 20px;
+  color: #000000;
+  background-color: #ff8c00;
+}
+
+.page header .links li:hover {
+  color: #fff;
+}
+
+.page .content .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 150px);
+}
+
+.page .content .info h1 {
+  color: #ff8c00;
+  font-size: 3rem;
+}
+
+.page .content .info p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+/* responviso */
+
+@media (max-width: 767px) {
+  .page header {
+    min-height: auto;
+    display: initial;
+  }
+}
+@media (max-width: 767px) {
+  .page header .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .page header .logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .page header .links {
+    text-align: center;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 835px) {
+  .page header .links li {
+    font-size: 0.9rem;
+    justify-content: end;
+  }
+}
+@media (max-width: 767px) {
+  .page .content .container {
+    gap: 0;
+    min-height: calc(100vh - 101px);
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .page .content .info {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
